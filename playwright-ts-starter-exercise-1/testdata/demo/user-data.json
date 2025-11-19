@@ -1,0 +1,9 @@
+{
+  "test-user": {
+    "email": "test-email-kr4@test.com",
+    "password": "test1234!",
+    "confirm-password": "test1234!",
+    "given-name": "test",
+    "surname": "user"
+  }
+}

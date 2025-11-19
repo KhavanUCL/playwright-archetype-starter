@@ -1,0 +1,25 @@
+{
+  "name": "typescriptplaywrighttdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_demo": "cross-env ENV_NAME=demo npx playwright test --project=Functional --grep @Smoke",
+    "test_demo_setup": "cross-env ENV_NAME=demo npx playwright test --project=chromium-with-setup --grep @Smoke",
+    "test_demo_setup_with_sessionstate": "cross-env ENV_NAME=demo npx playwright test --project=chromium-with-setup-and-sessionstate --grep @SmokeSessionState",
+    "allure:report": "npx allure generate ./allure-results --clean -o ./allure-report && npx allure open ./allure-report",
+    "test:cleanup": "node cleanup-allure.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^22.15.29",
+    "allure-playwright": "^3.2.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0"
+  }
+}

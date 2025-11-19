@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Playwright Test",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "--grep",
+        "@Smoke",
+        //"--project=chromium-with-setup",
+        "--project=Functional",
+        // "@ExampleSessionState",
+        // "--project=chromium-with-setup-and-sessionstate",
+        "--headed",
+        "--timeout=0",
+        "--trace=on"
+      ],
+      "console": "integratedTerminal",
+      "env": {
+        "ENV_NAME": "demo",
+        "PLAYWRIGHT_DEBUG": "1"
+      },
+      "cwd": "${workspaceFolder}",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/**/*.ts"] // If you're compiling TS to dist
+    }
+  ]
+}
